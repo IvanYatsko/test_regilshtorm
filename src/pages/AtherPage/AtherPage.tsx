@@ -6,7 +6,7 @@ import { Button, Input, Weather } from '../../components';
 import { IAtherPage, IParams } from '../pages.module';
 
 export const AtherPage: React.FC<IAtherPage> = ({ setInputValue, value, handleClickCity }) => {
-  const { city, cityWeatherData, currentWeather } = useSelector((state: IReducer) => state.weather);
+  const { cityWeatherData } = useSelector((state: IReducer) => state.weather);
   const params: IParams = useParams();
 
   return (
@@ -14,8 +14,8 @@ export const AtherPage: React.FC<IAtherPage> = ({ setInputValue, value, handleCl
       <div className='page-container'>
         <h2>{params.city}</h2>
         <div>
-          <Input type='text' placeholder='Enter city' value={value} setInputValue={setInputValue} />
-          <Button text='Enter' handleClick={handleClickCity} />
+          <Input type='text' placeholder='Введите город' value={value} setInputValue={setInputValue} />
+          <Button text='Ввод' handleClick={handleClickCity} />
           <NavLink to={`/`} className=''>
             Перейти на главную страцу
           </NavLink>

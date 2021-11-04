@@ -12,7 +12,6 @@ export const MainPageContainer: React.FC = () => {
 
   useEffect(() => {
     dispatch(getWeather(city));
-    console.log(city);
   }, [city]);
 
   const handleClickCity = (value: string) => {

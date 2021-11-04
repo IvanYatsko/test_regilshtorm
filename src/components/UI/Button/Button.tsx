@@ -1,7 +1,7 @@
 import React from 'react';
 import { EButtonType, IButton } from '../UI.module';
 
-import './Button.scss'
+import './Button.scss';
 
 export const Button: React.FC<IButton> = ({
   text,
