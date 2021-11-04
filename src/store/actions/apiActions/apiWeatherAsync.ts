@@ -7,10 +7,14 @@ export function getWeather(
   days: number = 10
 ): (dispatch: Dispatch<IAction>) => Promise<void> {
   return async function (dispatch: Dispatch<IAction>) {
-    const response = await fetch(
-      `${DOMEN}forecast.json?q=${city}&days=${days}&aqi=no&alerts=no&key=${KEY}`
-    );
-    const { forecast, current } = await response.json();
-    dispatch(getCityWeather({ current, forecastday: forecast.forecastday }));
+    try {
+      const response = await fetch(
+        `${DOMEN}forecast.json?q=${city}&days=${days}&aqi=no&alerts=no&key=${KEY}`
+      );
+      const { forecast, current } = await response.json();
+      dispatch(getCityWeather({ current, forecastday: forecast.forecastday }));
+    } catch {
+      throw Error('Error');
+    }
   };
 }

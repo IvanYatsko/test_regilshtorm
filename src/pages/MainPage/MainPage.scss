@@ -7,7 +7,44 @@
     }
 
     &-container {
+        padding: 50px;
         width: 100%;
         max-width: 1000px;
+    }
+
+    &-section {
+        margin-bottom: 30px;
+
+        &>button {
+            margin-right: 20px;
+        }
+    }
+}
+
+.weather {
+    border: 1px solid #d3cece;
+    border-radius: 5px;
+    padding: 15px;
+
+    &__title {
+        background-color: burlywood;
+        margin: 0;
+        padding: 15px;
+    }
+
+    &__button {
+        &>button {
+            margin-right: 20px;
+        }
+    }
+
+    &__3days {
+        display: flex;
+    }
+
+    &__hour {
+        border-bottom: 1px solid #d3cece;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
     }
 }

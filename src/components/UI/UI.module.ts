@@ -9,3 +9,10 @@ export interface IButton {
   isDisabled?: boolean;
   type?: EButtonType;
 }
+
+export interface IInput {
+  type: string;
+  placeholder: string;
+  value: string;
+  setInputValue: (value: string) => void;
+}

@@ -1,6 +1,8 @@
 import React from 'react';
 import { EButtonType, IButton } from '../UI.module';
 
+import './Button.scss'
+
 export const Button: React.FC<IButton> = ({
   text,
   handleClick,
@@ -8,7 +10,7 @@ export const Button: React.FC<IButton> = ({
   type = EButtonType.button,
 }) => (
   <button
-    className={'button'}
+    className='button'
     disabled={isDisabled}
     onClick={(event: React.MouseEvent<HTMLButtonElement>) => handleClick(text)}
     type={type}
